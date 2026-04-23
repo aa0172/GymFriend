@@ -581,3 +581,47 @@ body {
 .hidden {
     display: none;
 }
+/* Дополнительные стили для главной страницы */
+.hero-section {
+    background: radial-gradient(circle at 10% 20%, rgba(139, 92, 246, 0.1), transparent);
+}
+
+.pill {
+    transition: var(--transition);
+    cursor: default;
+}
+
+.pill:hover {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)) !important;
+    transform: translateY(-2px);
+}
+
+.hero-buttons .btn {
+    transition: all 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+}
+
+/* Адаптация секций для мобильных */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem !important;
+    }
+    
+    .hero-content p {
+        font-size: 1rem !important;
+    }
+    
+    .stats-section .grid-3,
+    .how-it-works .grid-3,
+    .testimonials .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .features .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
